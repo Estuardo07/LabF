@@ -6,8 +6,8 @@ import pickle
 
 
 def main():
-    archivo_yapar = './pruebas/lab-f.yalp'
-    terminals, no_terminals, gramatica = yaparReader(archivo_yapar)
+    file = './pruebas/YAPAR4Yapar.txt'
+    terminals, no_terminals, gramatica = yaparReader(file)
     tokens = get_tokens()
     for val in terminals:
         if val in tokens.values():

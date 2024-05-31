@@ -142,7 +142,7 @@ def cerradura_inicial(gramatica_evaluar, gramatica_inicial):
     # agregar punto al inicio de la produccion si no tiene. Solo se ejecuta la primera vez que se pasa e'
     for produccion in gramatica_evaluar:
         if Punto() not in produccion.produccion:
-            print("no tiene punto")
+            print("No tiene punto")
             print(str(produccion))
             produccion.produccion.insert(0, Punto())
             gramatica.append(produccion)
