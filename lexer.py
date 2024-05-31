@@ -5,8 +5,8 @@ import pickle
 
 
 def main():
-    archivo_yalex = './pruebas/lab-f.yal'
-    rule_token, token_dic = yalexReader(archivo_yalex)
+    file = './pruebas/YAL4Yapar.txt'
+    rule_token, token_dic = yalexReader(file)
     with open('template.j2', 'r') as f:
         template = f.read()
 
