@@ -5,15 +5,14 @@ import pickle
 
 
 def main():
-    archivo_yalex = './tests/lab-f.yal'
+    archivo_yalex = './pruebas/lab-f.yal'
     rule_token, token_dic = yalexReader(archivo_yalex)
     with open('template.j2', 'r') as f:
         template = f.read()
 
-    # delete the wor return for every element in the dictionary
     token_dic = {key: value.replace('return ', '')
                  for key, value in token_dic.items()}
-    # delete white spaces
+    
     token_dic = {key: value.replace(' ', '')
                  for key, value in token_dic.items()}
 
@@ -23,7 +22,7 @@ def main():
         f.write(rendered)
     afd = regex_to_afd(rule_token, token_dic)
 
-    print("afd generado")
+    print("AFD generado")
     with open('afd.pickle', 'wb') as f:
         pickle.dump(afd, f)
 

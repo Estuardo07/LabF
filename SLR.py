@@ -274,7 +274,7 @@ def siguientes(gramatica_inicial):
 
 
 # funcion principal para crear el SLR
-def construccion_slr(gramatica, terminales, no_terminales):
+def slr_construction(gramatica, terminales, no_terminales):
     gramatica_extendida = extender_gramatica(gramatica)
     gramatica_inicial = gramatica_to_obj(
         gramatica_extendida, terminales, no_terminales)
